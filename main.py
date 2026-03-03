@@ -29,5 +29,5 @@ deleted_value = person.pop(3)
 print(person_2, person, deleted_value)
 
 person_2.clear()
-
+print(person_2)
 print(person_2)
