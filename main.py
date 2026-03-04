@@ -1,3 +1,5 @@
+import copy
+
 # Dictionary (Словники)
 person = {
     "id": 1,
@@ -31,3 +33,34 @@ print(person_2, person, deleted_value)
 person_2.clear()
 
 print(person_2)
+print(person)
+print("age" in person)
+
+for key in person:
+    print(person[key])
+
+for key in person.keys():
+    print(key)
+
+for value in person.values():
+    print(value)
+
+for key, value in person.items():
+    print(key, "-->", value)
+
+for index, (key, value) in enumerate(person.items()):
+    print(index, key, value)
+
+# --------- copy ---------
+original = {
+    "name": "Alice",
+    "age": 30,
+    "skills": ["Python", "JavaScript"]
+}
+
+original_copy = original.copy()
+deep_copy = copy.deepcopy(original)
+
+original["name"] = "Alex"
+original["skills"].append("Ruby")
+print(original_copy, original, deep_copy)
