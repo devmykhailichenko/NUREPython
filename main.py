@@ -64,3 +64,27 @@ deep_copy = copy.deepcopy(original)
 original["name"] = "Alex"
 original["skills"].append("Ruby")
 print(original_copy, original, deep_copy)
+
+# tuple
+numbers = (1, 3, 4, 5, 3, 4, 5, 1, 1, 1, 1)
+single_tuple = (5,)
+# numbers[2] = 3
+# del numbers[1]
+print(numbers[2], type(single_tuple))
+
+for value in numbers:
+    print(value)
+
+print(
+    2 in numbers,
+    len(numbers),
+    max(numbers),
+    numbers.count(1),
+    numbers.index(1)
+)
+
+list_out_of_tuple = list(numbers)
+list_out_of_tuple.append("Hello")
+tuple_numbers = tuple(list_out_of_tuple)
+print(type(list_out_of_tuple), list_out_of_tuple, tuple_numbers)
+
