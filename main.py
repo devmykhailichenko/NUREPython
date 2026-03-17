@@ -22,10 +22,4 @@ print(next_content)
 
 file_cursor.close()
 
-list_1 = [1, 4, 5, 6]
-list_copy = list_1
-list_1[0] = 10
-
-print(list_1, list_copy)
-
 # Context manager
