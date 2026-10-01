@@ -45,3 +45,43 @@ def my_universal_func(name, surname, *purchases, **kwargs):
     print(name, surname, purchases, kwargs)
 
 my_universal_func("Ihor", "Mykhailichenko", "CAr", "Bag", "apple", car_prise=4000, bag_price=400, apple=2)
+
+#-------#
+def func(x):
+    return x * 2
+
+
+my_lambda = lambda x, y: x * 2 if x > 0 else 0
+
+print(func(4), my_lambda(4, 8))
+print(type(func), type(my_lambda))
+
+
+#------#
+def register_user(name, surname, after_func):
+    print('User registered!')
+    after_func()
+
+def log_event():
+    print("Logged in DB!")
+
+def log_event_txt():
+    print("Logged in TXT!")
+
+register_user("Ihor", "Bob", log_event)
+register_user("Ihor", "Bob", log_event_txt)
+register_user(
+    "Ihor",
+    "Bob",
+    lambda : print("Lambda after register!")
+)
+
+#----------#
+numbers = [1, 2, 3, 4, 6]
+
+result_list = list(map(lambda number: number * 2, numbers))
+print(result_list)
+
+filtered_list = list(filter(lambda number: number % 2 == 0, numbers))
+print(filtered_list)
+
