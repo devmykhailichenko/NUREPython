@@ -1,3 +1,3 @@
-Alice:95
+Anna:67
 Bob:78
-Ihor:85
+Alice:100
